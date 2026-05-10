@@ -1,0 +1,187 @@
+:root {
+    --bg: #01080a;
+    --teal: #00f2ff;
+    --dark-teal: #004d4d;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { 
+    background-color: var(--bg); 
+    color: white; 
+    font-family: 'Rajdhani', sans-serif; 
+    overflow-x: hidden;
+}
+
+/* Header & Nav */
+header { width: 100%; position: fixed; top: 0; z-index: 1000; padding: 20px 50px; background: linear-gradient(to bottom, black, transparent); }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo-box { border: 1px solid var(--teal); padding: 5px; font-weight: bold; font-size: 20px; }
+.logo-text { font-size: 9px; letter-spacing: 2px; line-height: 1.1; }
+nav a { color: #888; text-decoration: none; margin: 0 20px; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
+nav a.active, nav a:hover { color: var(--teal); }
+.contact-btn { background: transparent; border: 1px solid #333; color: white; padding: 10px 20px; border-radius: 50px; cursor: pointer; }
+
+/* Hero */
+.hero { height: 100vh; position: relative; display: flex; align-items: center; padding: 0 100px; background: radial-gradient(circle at 50% 40%, #002b2b 0%, #01080a 70%); }
+.hero-bg-text { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 18vw; font-family: 'Orbitron'; font-weight: 900; color: rgba(255,255,255,0.02); line-height: 0.8; text-align: center; pointer-events: none; }
+
+.hero-content { z-index: 10; width: 450px; }
+.label { color: var(--teal); letter-spacing: 5px; font-size: 12px; }
+.main-title { font-size: 90px; font-weight: 700; line-height: 0.9; margin: 20px 0; }
+.teal { color: var(--teal); text-shadow: 0 0 20px rgba(0, 242, 255, 0.4); }
+.hero-content h3 { font-size: 18px; color: #ccc; margin-bottom: 10px; }
+.hero-content p { color: #888; font-size: 14px; margin-bottom: 30px; }
+
+.btn-primary { background: var(--teal); color: black; border: none; padding: 15px 40px; font-weight: bold; cursor: pointer; clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 0 100%); transition: 0.3s; }
+.btn-primary:hover { transform: scale(1.05); background: white; }
+
+.hero-image-wrap { position: absolute; right: 25%; bottom: 0; height: 90vh; }
+.main-character { height: 100%; filter: drop-shadow(0 0 50px rgba(0, 242, 255, 0.2)); }
+
+.side-features { position: absolute; right: 50px; top: 30%; display: flex; flex-direction: column; gap: 50px; }
+.feature-item { font-size: 11px; letter-spacing: 2px; color: #666; border-left: 2px solid var(--teal); padding-left: 15px; }
+
+/* Stats Bar */
+.stats { display: flex; justify-content: space-evenly; background: rgba(0,0,0,0.5); border-top: 1px solid #1a1a1a; padding: 50px 0; }
+.stat-box h2 { font-size: 45px; color: var(--teal); }
+.stat-box p { font-size: 11px; color: #555; letter-spacing: 2px; }
+.divider { width: 1px; height: 60px; background: #1a1a1a; }
+
+/* Projects Grid */
+.projects { padding: 100px; text-align: center; }
+.section-label { color: var(--teal); letter-spacing: 8px; }
+.section-title { font-size: 50px; margin-bottom: 60px; letter-spacing: 3px; }
+.project-grid { display: grid; grid-template-cols: repeat(3, 1fr); gap: 30px; }
+.card { background: var(--glass); border: 1px solid #1a1a1a; border-radius: 15px; overflow: hidden; text-align: left; transition: 0.3s; }
+.card:hover { border-color: var(--teal); transform: translateY(-10px); }
+.card-img { height: 200px; background-size: cover; background-position: center; filter: grayscale(0.5); transition: 0.3s; }
+.card:hover .card-img { filter: grayscale(0); }
+.card-content { padding: 25px; }
+.tag { color: var(--teal); font-size: 10px; text-transform: uppercase; border: 1px solid var(--teal); padding: 2px 8px; border-radius: 4px; }
+.card h3 { margin: 15px 0 10px; font-size: 24px; }
+.card p { color: #777; font-size: 14px; margin-bottom: 20px; }
+.card-footer { display: flex; justify-content: space-between; border-top: 1px solid #1a1a1a; padding-top: 15px; font-size: 20px; }
+/* Workflow Styles */
+.workflow {
+    padding: 100px 50px;
+    background: #01080a;
+    text-align: center;
+}
+
+.workflow-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+.workflow-line {
+    position: absolute;
+    top: 50px;
+    left: 5%;
+    right: 5%;
+    height: 1px;
+    background: rgba(0, 242, 255, 0.2);
+    z-index: 1;
+}
+
+.workflow-item {
+    position: relative;
+    z-index: 2;
+    background: var(--bg);
+    border: 1px solid #1a1a1a;
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 18%;
+    transition: 0.3s;
+}
+
+.workflow-item:hover {
+    border-color: var(--teal);
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
+}
+
+.step-num {
+    font-size: 12px;
+    color: var(--teal);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.step-icon {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.workflow-item h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.workflow-item p {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Footer & CTA */
+.main-footer {
+    padding: 80px 100px 30px;
+    background: radial-gradient(circle at bottom, #001a1a 0%, #01080a 50%);
+}
+
+.cta-box {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cta-content h2 {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.footer-info {
+    text-align: right;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.contacts p {
+    font-size: 14px;
+    color: #888;
+    margin: 5px 0;
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    color: var(--teal);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.copyright {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    border-top: 1px solid #111;
+    padding-top: 20px;
+}

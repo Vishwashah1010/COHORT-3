@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ASTRO Winter Armor II</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- NAVBAR -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      ASTRO<span>.</span>
+    </div>
+
+    <nav class="nav-links">
+
+      <a href="#">PRODUCTS</a>
+      <a href="#">CATEGORY</a>
+      <a href="#">ABOUT US</a>
+      <a href="#">CONTACT</a>
+
+    </nav>
+
+    <div class="icons">
+
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <i class="fa-solid fa-cart-shopping"></i>
+      <i class="fa-regular fa-user"></i>
+
+    </div>
+
+  </header>
+
+  <!-- MAIN SECTION -->
+
+  <section class="main-content">
+
+    <!-- LEFT -->
+
+    <div class="left-panel">
+
+      <p class="new">NEW</p>
+
+      <h1>
+        ASTRO <br>
+        WINTER <br>
+        ARMOR <span>II</span>
+      </h1>
+
+      <div class="price">$560</div>
+
+      <div class="line"></div>
+
+      <h3>DESCRIPTION</h3>
+
+      <p class="desc">
+        A next-gen cold weather jacket.
+        The essence of retro style and
+        futuristic engineering combined
+        for extreme winter conditions.
+      </p>
+
+      <button class="read-more">
+        READ MORE →
+      </button>
+
+      <div class="accordion">
+
+        <div class="acc-item">
+          MATERIAL & CARE
+          <span>⌄</span>
+        </div>
+
+        <div class="acc-item">
+          SHIPPING & RETURNS
+          <span>⌄</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- CENTER -->
+
+    <div class="center-panel">
+
+      <img
+        src="images/beige.png"
+        class="main-jacket"
+        id="mainImage"
+      >
+
+      <div class="specs">
+
+        <div class="spec">
+          ❄️
+          <span>EXTREME WARMTH</span>
+        </div>
+
+        <div class="spec">
+          🛡️
+          <span>WIND RESISTANT</span>
+        </div>
+
+        <div class="spec">
+          🍃
+          <span>LIGHTWEIGHT</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="right-panel">
+
+      <h2>SIZE</h2>
+
+      <div class="sizes">
+
+        <button>S</button>
+        <button class="active">M</button>
+        <button>L</button>
+        <button>XL</button>
+
+      </div>
+
+      <div class="guide">
+        SIZE GUIDE →
+      </div>
+
+      <div class="right-line"></div>
+
+      <h2>COLOR</h2>
+
+      <div class="colors">
+
+        <div
+          class="color-card active-color"
+          onclick="changeJacket('images/beige.png', this)"
+        >
+          <img src="images/beige.png">
+          <p>BEIGE</p>
+        </div>
+
+        <div
+          class="color-card"
+          onclick="changeJacket('images/red.png', this)"
+        >
+          <img src="images/red.png">
+          <p>RED</p>
+        </div>
+
+        <div
+          class="color-card"
+          onclick="changeJacket('images/black.png', this)"
+        >
+          <img src="images/black.png">
+          <p>BLACK</p>
+        </div>
+
+        <div
+          class="color-card"
+          onclick="changeJacket('images/white.png', this)"
+        >
+          <img src="images/white.png">
+          <p>WHITE</p>
+        </div>
+
+      </div>
+
+      <button class="wishlist">
+        ♡ ADD TO WISHLIST
+      </button>
+
+      <button class="cart-btn">
+        ADD TO BAG
+      </button>
+
+    </div>
+
+  </section>
+
+  <!-- FEATURE CARDS -->
+
+  <section class="features">
+
+    <div class="feature-card">
+
+      <img src="images/waterproof.png">
+
+      <div class="feature-text">
+
+        <h3>3X WATER-REPELLENT</h3>
+
+        <p>
+          The fabric repels rain,
+          snow and moisture while
+          keeping you dry.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="feature-card">
+
+      <img src="images/puffed.png">
+
+      <div class="feature-text">
+
+        <h3>3D AREAS PUFFERED</h3>
+
+        <p>
+          Strategically padded zones
+          trap heat and maximize
+          insulation.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="feature-card">
+
+      <img src="images/model.png">
+
+      <div class="feature-text">
+
+        <h3>INSULATION</h3>
+
+        <p>
+          Advanced thermal filling
+          locks warmth up to
+          -30°C.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="feature-card">
+
+      <img src="images/utility-pocket.png">
+
+      <div class="feature-text">
+
+        <h3>UTILITY POCKETS</h3>
+
+        <p>
+          Multi-functional pockets
+          for secure storage.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER STRIP -->
+
+  <section class="bottom-strip">
+
+    <div class="strip-item">
+
+      ❄️
+
+      <div>
+
+        <h4>PREMIUM FABRICS</h4>
+
+        <p>
+          Durable high-performance materials.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="strip-item">
+
+      🛡️
+
+      <div>
+
+        <h4>THERMAL PROTECTION</h4>
+
+        <p>
+          Built for extreme winter climates.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="strip-item">
+
+      ⭕
+
+      <div>
+
+        <h4>DESIGNED FOR FUNCTION</h4>
+
+        <p>
+          Every detail serves a purpose.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="strip-item">
+
+      ⭐
+
+      <div>
+
+        <h4>LIMITED EDITION</h4>
+
+        <p>
+          Exclusive drops, limited quantities.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function changeJacket(image, element){
+
+  document.getElementById("mainImage").src = image;
+
+  const cards = document.querySelectorAll(".color-card");
+
+  cards.forEach(card => {
+    card.classList.remove("active-color");
+  });
+
+  element.classList.add("active-color");
+
+}
+
+</script>
+
+</body>
+</html>
